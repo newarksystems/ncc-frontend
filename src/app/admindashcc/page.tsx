@@ -28,8 +28,7 @@ import { BiSolidPhoneCall } from "react-icons/bi"
 import { GiReceiveMoney } from "react-icons/gi"
 import { LiveCallsTable } from "@/components/livecalls"
 import CallsRatePerHour from "@/components/callratesperhour"
-import { AgentPerformanceDash } from "@/components/agentperformancedash"
-import { AdminHeader } from "@/components/pages/adminheader"
+import { AgentPerformanceDash } from "@/components/agents/agentperformancedash"
 
 export default function AdminDashboardCC() {
   const [showAnsweredTooltip, setShowAnsweredTooltip] = useState(false);
@@ -39,7 +38,6 @@ export default function AdminDashboardCC() {
 
   return (
     <div className="min-h-screen text-white ">
-      <AdminHeader />
       {/* Navigation Bar */}
       <div className="bg-slate-800 border-b border-slate-700 px-6 py-2 overflow-x-auto">
         <div className="flex items-center justify-between">

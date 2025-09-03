@@ -30,7 +30,6 @@ const sampleData: CallData[] = [
 
 export default function CallsRatePerHour() {
   const [isFullscreen, setIsFullScreen] = useState(false)
-  const [minimized, setMinimized] = useState(false);
 
   return (
     <div className={`${

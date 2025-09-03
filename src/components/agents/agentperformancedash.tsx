@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Badge } from "./ui/badge";
+import { Badge } from "../ui/badge";
 import { Minimize2, Phone, X, RefreshCcw } from "lucide-react";
 
 export function AgentPerformanceDash() {
@@ -70,7 +70,7 @@ export function AgentPerformanceDash() {
                 <tbody>
                   {[
                     {
-                      agent: "Doris Glimp (1052)",
+                      agent: "Doris Glimp",
                       availability: "Available",
                       // phone: "5554448842",
                       amount_collected: "10000",
@@ -85,7 +85,7 @@ export function AgentPerformanceDash() {
                       
                     },
                     {
-                      agent: "Mark Simon (1029)",
+                      agent: "Mark Simon",
                       availability: "Available",
                       // phone: "5554448842",
                       amount_collected: "10000",
@@ -100,7 +100,7 @@ export function AgentPerformanceDash() {
                       
                     },
                     {
-                      agent: "Susan Yalovsky (1368)",
+                      agent: "Susan Yalovsky",
                       availability: "Away",
                       // phone: "5554448842",
                       amount_collected: "20000",
@@ -115,7 +115,7 @@ export function AgentPerformanceDash() {
                       
                     },
                     {
-                      agent: "Mary Homer (1104)",
+                      agent: "Mary Homer",
                       availability: "Do Not Disturb",
                       // phone: "5554448842",
                       amount_collected: "30000",
@@ -130,7 +130,7 @@ export function AgentPerformanceDash() {
                       
                     },
                     {
-                      agent: "Britta Shoop (1030)",
+                      agent: "Britta Shoop",
                       availability: "Available",
                       // phone: "5554448842",
                       amount_collected: "60000",
@@ -145,7 +145,7 @@ export function AgentPerformanceDash() {
                       
                     },
                   ].map((row, i) => (
-                    <tr key={i}>
+                    <tr key={i} className="text-white">
                       <td className="p-2 border border-slate-600">
                         <div className="flex items-center gap-1">
                           <Phone className="w-3 h-3 text-orange-400" />

@@ -116,7 +116,7 @@ export default function Sidebar() {
               <ul className="ml-10 mt-1 space-y-1 text-sm">
                 <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
                   <Link
-                    href={'live-actions/activity/agents'}
+                    href={'/live-actions/activity/agents'}
                   >
                     Live Actions
                   </Link>
@@ -137,18 +137,26 @@ export default function Sidebar() {
                   </button>
                   {openNestedDropdown === "agentDetails" && (
                     <ul className="ml-6 mt-1 space-y-1 text-xs">
+                      <Link
+                          href={'/agent-details/calls'}
+                        >
                       <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
-                        Call Details
+                          Call Details
                       </li>
+                      </Link>
                       <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
                         Login History
                       </li>
                     </ul>
                   )}
                 </li>
+                <Link 
+                href={'/agent-performance'}
+                >
                 <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
                   Agent Performance
                 </li>
+                </Link>
               </ul>
             )}
 
@@ -160,13 +168,13 @@ export default function Sidebar() {
                 className="fixed top-20 left-16 w-52 bg-slate-900 border border-slate-700 shadow-lg py-2 z-50"
             >
                 <ul className="space-y-1 text-sm">
-                  <li className="hover:bg-slate-700 px-3 py-2 cursor-pointer">
-                    <Link
-                    href={'live-actions/activity/agents'}
+                  <Link
+                    href={'/live-actions/activity/agents'}
                     >
+                  <li className="hover:bg-slate-700 px-3 py-2 cursor-pointer">
                     Live Actions
-                  </Link>
                   </li>
+                  </Link>
                   <li>
                     <button
                       onClick={() => setOpenNestedDropdown(
@@ -183,18 +191,24 @@ export default function Sidebar() {
                     </button>
                     {openNestedDropdown === "agentDetails" && (
                       <ul className="ml-4 mt-1 space-y-1 text-xs">
+                        <Link
+                            href={'/agent-details/calls'}
+                        >
                         <li className="hover:bg-slate-700 px-3 py-2 cursor-pointer">
-                          Call Details
+                            Call Details
                         </li>
+                        </Link>
                         <li className="hover:bg-slate-700 px-3 py-2 cursor-pointer">
                           Login History
                         </li>
                       </ul>
                     )}
                   </li>
+                  <Link href={'/agent-performance'}>
                   <li className="hover:bg-slate-700 px-3 py-2 cursor-pointer">
                     Agent Performance
                   </li>
+                  </Link>
                 </ul>
               </div>
             )}
