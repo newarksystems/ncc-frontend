@@ -1,18 +1,58 @@
 import React, { useState } from "react"
-import { RefreshCcw, Phone, X, Minimize2 } from "lucide-react"
+import { RefreshCcw, Phone, X, Minimize2, ChevronDown, Users, MoreHorizontal } from "lucide-react"
 import { Badge } from "../ui/badge"
 import { MdPhoneMissed } from "react-icons/md"
 import { FaPhoneAlt } from "react-icons/fa"
 import { HiPhoneArrowDownLeft, HiPhoneArrowUpRight } from "react-icons/hi2"
 import { TbPhoneDone } from "react-icons/tb"
+import { Button } from "../ui/button"
 import { AgentsCallDetailsLineGraph } from "./agentcalldetailsgraphs"
 import AgentsTotalCallsComparison from "./agentcallcomparisongraphs"
 import AgentAvgHandlingTimeChart from "./agentcallahtgraph"
 
 export function AgentCallDetails() {
     return (
-        <div className="p-4">
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 mb-6 bg-slate-900 border-b border-slate-600 gap-0.5 text-center">
+        <div className="">
+          <div className="bg-slate-800 border-b border-slate-700 mb-4  px-6 py-3">
+                <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-2 text-sm text-slate-300">
+                            <span>Agents</span>
+                            <span>{" > "}</span>
+                            <span>Overview</span>
+                            <span>{" > "}</span>
+                            <span className="text-white">Call Details</span>
+                        </div>
+                        <div className="flex items-center space-x-2 text-xs text-slate-400">
+                            <span>-- SAVED FILTERS --</span>
+                            <Button variant="ghost" size="sm" className="h-6 px-2 text-xs">
+                                -- Select -- <ChevronDown className="w-3 h-3 ml-1" />
+                            </Button>
+                        </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-2 text-xs text-slate-400">
+                            <span>FILTERS</span>
+                        </div>
+                        <Badge variant="secondary" className="bg-red-600 text-white text-xs">
+                            Last 7 Days
+                        </Badge>
+                        <Button variant="ghost" size="sm" className="h-6 px-2 text-xs">
+                            <Users className="w-3 h-3 mr-1" />
+                        </Button>
+                        <Button variant="ghost" size="sm" className="h-6 px-2">
+                            <MoreHorizontal className="w-4 h-4" />
+                        </Button>
+                    </div>
+                </div>
+                <div className="flex items-center space-x-4 mt-2 text-xs text-slate-400">
+                    <span>Applied Filters ⊗</span>
+                    <span>Date Range: Last 7 Days ⊗</span>
+                    <span>Extension: 1005 ⊗</span>
+                </div>
+            </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 mb-6 bg-slate-900 border-b border-slate-600 gap-0.5 text-center p-4">
             <div className="flex flex-col items-center px-1 pt-2 bg-slate-800 px-2 py-4">
                 <div className="flex items-center gap-2">
                 <FaPhoneAlt className="w-8 h-8 text-blue-400" />
@@ -76,7 +116,7 @@ export function AgentCallDetails() {
             </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 overflow-x-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 overflow-x-auto p-4">
             <AgentCallDetailsList />        
             <AgentsTotalCallsComparison />
             <AgentsCallDetailsLineGraph />

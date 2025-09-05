@@ -233,12 +233,16 @@ export default function Sidebar() {
 
             {isOpen && openDropdown === "calls" && (
               <ul className="ml-10 mt-1 space-y-1 text-sm">
-                <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
-                  Live Calls
-                </li>
-                <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
-                  Call Details
-                </li>
+                <Link href={"/live-actions/activity/calls"}>
+                  <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
+                    Live Calls
+                  </li>
+                </Link>
+                <Link href={"/call-details/call-logs/"}>
+                  <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
+                    Call Logs
+                  </li>
+                </Link>
                 <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
                   Call Statistics
                 </li>
@@ -252,12 +256,16 @@ export default function Sidebar() {
                 className="fixed top-20 left-16 w-52 bg-slate-900 border border-slate-700 shadow-lg py-2 z-50"
             >
                 <ul className="space-y-1 text-sm">
-                  <li className="hover:bg-slate-700 px-3 py-2 cursor-pointer">
-                    Live Calls
-                  </li>
-                  <li className="hover:bg-slate-700 px-3 py-2 cursor-pointer">
-                    Call Details
-                  </li>
+                  <Link href={"/live-actions/activity/calls"}>
+                    <li className="hover:bg-slate-700 px-3 py-2 cursor-pointer">
+                      Live Calls
+                    </li>
+                  </Link>
+                  <Link href={"/call-details/call-logs/"}>
+                    <li className="hover:bg-slate-800 rounded p-2 cursor-pointer">
+                      Call Logs
+                    </li>
+                  </Link>
                   <li className="hover:bg-slate-700 px-3 py-2 cursor-pointer">
                     Call Statistics
                   </li>
